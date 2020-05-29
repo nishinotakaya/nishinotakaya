@@ -1,7 +1,8 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-default" id=header style="background-color": white;>
+  
   <div class="container">
     <%= link_to "Sample App", root_path, id: "logo" %>
-    <nav>
+    
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Top", root_path %></li>
         <% if logged_in? %>
