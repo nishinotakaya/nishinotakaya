@@ -1,9 +1,11 @@
 <header class="navbar navbar-fixed-top navbar-default" id=header style="background-color": white;>
   
   <div class="container">
-    <a id="logo" href="L">Task App</a>
+    <a id="logo" href="/">Task App</a>
+    <nav>
      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Top", root_path %></li>
+        <li><a class="header-list" href="/">トップ</a></li>
+         <li><a class="header-list" href="/login">ログイン</a></li>
         <% if logged_in? %>
           <li><%= link_to "Users", '#' %></li>
           <li class="dropdown">
@@ -18,7 +20,7 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "Log in", login_path %></li>
+          
         <% end %>
       </ul>
     </nav>

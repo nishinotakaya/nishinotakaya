@@ -75,6 +75,15 @@ p {
   text-decoration: none;
 }
 
+.header-list {
+  color: #fff !important;
+  font-weight: blod;
+}
+
+#header-list:hover {
+  color: #808080;
+  text-decoration: none;
+}
 /* デバッグウインドウ */
 
 .debug_dump {
