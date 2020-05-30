@@ -83,6 +83,10 @@ p {
 .header-list:hover {
    color: silver !important;
 }
+
+a:hover{
+  outline: 0;
+}
 /* デバッグウインドウ */
 
 .debug_dump {
