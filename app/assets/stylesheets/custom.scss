@@ -77,12 +77,11 @@ p {
 
 .header-list {
   color: #fff !important;
-  font-weight: blod;
+  font-weight: bold;
 }
 
-#header-list:hover {
-  color: #808080;
-  text-decoration: none;
+.header-list:hover {
+   color: silver !important;
 }
 /* デバッグウインドウ */
 
