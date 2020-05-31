@@ -6,7 +6,17 @@
      <ul class="nav navbar-nav navbar-right">
         <li><a class="header-list" href="/">トップ</a></li>
          <li><a class="header-list" href="/login">ログイン</a></li>
+     </ul> 
+    </nav>
+  </div>
+</header>
         <% if logged_in? %>
+ <header class="navbar navbar-fixed-top navbar-default" id=header>
+   <div class="container">
+     <a id="logo" href="/">Task App</a>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="header-list" href="/">トップ</a></li>
           <li><a class="header-list" href="/users">利用者一覧</a></li>
           <li><a class="header-list" href="/users/1/tasks/new">タスク作成</a></li>
           <li class="dropdown">
@@ -15,8 +25,11 @@
                <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
+               <li class="dropdown-header">ユーザー</li>
               <li><%= link_to "プロフィール", current_user %></li>
               <li><%= link_to "設定", '#' %></li>
+               <li class="dropdown-header">タスク</li>
+              <li><a href="/users/1/tasks">タスク一覧</a></li>
               <li class="divider"></li>
               <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
             </ul>

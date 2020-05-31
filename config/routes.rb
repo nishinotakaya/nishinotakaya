@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'posts/index'
+
+  get 'home/top'
+
   get 'tasks/index'
 
   get 'tasks/show'
