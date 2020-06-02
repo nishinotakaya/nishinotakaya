@@ -1,3 +1,33 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.task-table {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* 入力フォーム */
+
+.label-signup {
+  margin-top: 5px;
+}
+
+.btn-signup {
+  margin-top: 10px;
+}
+
+.label-task--edit {
+  margin-top: 5px;
+}
+
+.btn-task--edit {
+  margin-top: 10px;
+}
+
+/* ユーザー一覧ページ */
+
+#table-tasks {
+  td {
+    vertical-align: middle;
+  }  
+}
