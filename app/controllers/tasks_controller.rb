@@ -38,5 +38,15 @@ class TasksController < ApplicationController
     redirect_to(root_url) unless current_task?(@task)
  end  
  
+ def edit
+   @task = Task.find(params[:id])
+ end  
   
+ def update
+   @task = Task.find(params[:id])
+    if @task.use_tasks(task_params)
+    else
+      render :edit
+    end 
+ end    
 end
