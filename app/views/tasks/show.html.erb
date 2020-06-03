@@ -7,10 +7,12 @@
       <thead>
         <tr>
           <th class="active col-md-2"><%= Task.human_attribute_name :ID %></th>
-          <th class="active col-md-2"><%= Task.human_attribute_name :名称 %></th>
-          <th class="active col-md-2"><%= Task.human_attribute_name :詳細 %></th>
-          <th class="active col-md-2"><%= Task.human_attribute_name :作成日 %></th>
-          <th class="active col-md-2"><%= Task.human_attribute_name :更新日 %></th>
+          <td class="col-md-6"><%= @task.id %></td>
+          <th class="active col-md-2"><%= Task.human_attribute_name :name %></th>
+          <td><%= @task.name %></td>
+          <th class="active col-md-2"><%= Task.human_attribute_name :description %></th>
+          <th class="active col-md-2"><%= Task.human_attribute_name :create_at %></th>
+          <th class="active col-md-2"><%= Task.human_attribute_name :updated_at %></th>
         </tr>
       </thead>
 
