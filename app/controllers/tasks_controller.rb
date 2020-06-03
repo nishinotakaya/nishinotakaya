@@ -14,15 +14,31 @@ class TasksController < ApplicationController
    @task = Task.new
   end
   
- def create
+  def create
     @task = @user.tasks.build(task_params)
     if @task.save
       flash[:success] = "タスクを新規作成しました。"
       redirect_to user_tasks_url @user
     else
       render :new
-    end  
- end
+    end
+  end
+  
+  def update
+   @task = Task.find(params[:id])
+    if @task.update_attributes(task_params)
+     flash[:success] = '更新に成功しました。'
+      redirect_to user_tasks_url @user
+    else
+      render :edit
+    end
+  end
+  
+  def edit
+    @task = Task.find(params[:id])
+  end  
+  
+    
  
  private
  
@@ -37,16 +53,9 @@ class TasksController < ApplicationController
  def correct_task
     redirect_to(root_url) unless current_task?(@task)
  end  
- 
- def edit
-   @task = Task.find(params[:id])
- end  
-  
- def update
-   @task = Task.find(params[:id])
-    if @task.use_tasks(task_params)
-    else
-      render :edit
-    end 
- end    
 end
+ 
+ 
+  
+ 
+     

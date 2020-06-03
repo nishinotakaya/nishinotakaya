@@ -1,11 +1,11 @@
 <header class="navbar navbar-fixed-top navbar-default" id=header>
   
   <div class="container">
-    <a id="logo" href="/">Task App</a>
+    <%= link_to"Task App","/", id: "logo" %>
     <nav>
      <ul class="nav navbar-nav navbar-right">
-        <li><a class="header-list" href="/">トップ</a></li>
-         <li><a class="header-list" href="/login">ログイン</a></li>
+        <li><%= link_to"トップ", "/" %></li>
+        <li><%= link_to"ログイン","/login"%></li>
      </ul> 
     </nav>
   </div>
@@ -16,10 +16,10 @@
      <a id="logo" href="/">Task App</a>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="header-list" href="/">トップ</a></li>
-          <li><a class="header-list" href="/users">利用者一覧</a></li>
-          <li><a class="header-list" href="/tasks/new">タスク作成</a></li>
-          <li class="dropdown">
+        <li><%= link_to "トップ", root_path, class: "header-list" %></li>  
+        <li><%= link_to "利用者一覧", new_user_path, class: "header-list" %> </li>
+        <li><%= link_to "タスク作成",  new_user_task_path(current_user), class: "header-list" %></li>
+        <li class="dropdown">
             <a href="#" class="dropdown-toggle header-list" data-toggle="dropdown">
                <%= current_user.name %>
                <b class="caret"></b>
@@ -41,3 +41,7 @@
     </nav>
   </div>
 </header>
+        
+         
+          
+          

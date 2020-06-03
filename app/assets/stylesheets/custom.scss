@@ -75,9 +75,10 @@ p {
   text-decoration: none;
 }
 
-.header-list {
-  color: #fff !important;
-  font-weight: bold;
+
+li .header-list {
+    color: #fff !important;
+    font-weight: bold;
 }
 
 .header-list:hover {
