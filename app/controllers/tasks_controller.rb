@@ -34,6 +34,14 @@ class TasksController < ApplicationController
     end
   end
   
+  
+  def destroy
+   @task.destroy_attributes(task_params)
+    flash[:success] = "#{@task.name}のデータを削除しました。"
+    redirect_to user_tasks_url @user
+  end
+  
+  
   def edit
     @task = Task.find(params[:id])
   end  

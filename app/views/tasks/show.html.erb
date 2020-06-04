@@ -7,15 +7,15 @@
       <thead>
         <tr>
           <th class="active col-md-2"><%= Task.human_attribute_name :ID %></th>
-          <td class="col-md-6"><%= @task.id %></td>
+          <td><%= @task.id %></td>
           <th class="active col-md-2"><%= Task.human_attribute_name :name %></th>
           <td><%= @task.name %></td>
           <th class="active col-md-2"><%= Task.human_attribute_name :description %></th>
           <td><%= @task.description.present? ? @task.description : "未所属" %></td>
           <th class="active col-md-2"><%= Task.human_attribute_name :create_at %></th>
-          <td><%= l(@task.created_at, format: :long)%></td>
+          <td><%= @task.created_at %></td>
           <th class="active col-md-2"><%= Task.human_attribute_name :updated_at %></th>
-          <td><%= l(@task.updated_at, format: :long)%></td>
+          <td><%= @task.updated_at %></td>
         </tr>
       </thead>
 
