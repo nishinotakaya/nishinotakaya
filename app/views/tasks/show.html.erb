@@ -13,7 +13,9 @@
           <th class="active col-md-2"><%= Task.human_attribute_name :description %></th>
           <td><%= @task.description.present? ? @task.description : "未所属" %></td>
           <th class="active col-md-2"><%= Task.human_attribute_name :create_at %></th>
+          <td><%= l(@task.created_at, format: :long)%></td>
           <th class="active col-md-2"><%= Task.human_attribute_name :updated_at %></th>
+          <td><%= l(@task.updated_at, format: :long)%></td>
         </tr>
       </thead>
 
