@@ -17,9 +17,8 @@
       <tr>
       <td><%= link_to task.name, user_task_path(@user, task) %></td>
       <td><%= link_to "編集", edit_user_task_path(@user, task), class:"btn btn-success" %></td>
-      <td> <% if current_user.admin? && !current_user?(user) %>
-          <%= link_to "削除", task, method: :delete,: { confirm: "削除してよろしいですか？" },
-          class: "btn btn-danger" %></td>
+      <td><%= link_to "削除", user_task_path(@user, task), method: :delete, 
+          date: {confirm: "#{@task.name}を削除しますか？"}, class: "btn btn-lg btn-danger" %></td>
       </tr>
       <% end %>
      </tbody>
